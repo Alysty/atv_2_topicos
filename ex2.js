@@ -1,15 +1,13 @@
-import Extremos from "./Ex2_Extremos";
 
-class Utilitario{
+const Extremos = require("./Ex2_Extremos")
+
+const Utilitario = {
     acharExtremos(v){
-        if (!Array.isArray(v)){
-            throw "Deve ser passado um array"
+        if(v == null){
+            throw 'vetor nao pode ser nulo'
         }
-        if(v==null){
-            throw "vetor nao pode ser nulo"
-        }
-        if (v.length){
-            throw "vetor com zero elementos"
+        if (v.length == 0){
+            throw 'vetor com zero elementos'
         }
         let menor = v[0]
         let maior = v[0]
@@ -26,7 +24,7 @@ class Utilitario{
                 indiceMaior = i;
             }
         }
-        return new Extremos(menor, indiceMenor, maior, indiceMaior )
+        return Extremos.Extremos(menor, indiceMenor, maior, indiceMaior )
     }
 }
 
