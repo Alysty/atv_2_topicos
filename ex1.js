@@ -7,7 +7,8 @@ const Aleatorio = {
         if(inicio >= fim){
             return -1;
         }
-        return Math.floor((Math.random() * inicio ) + 1)
+        return Math.floor(Math.random() * fim - inicio) + inicio
+
     }
 }
 
